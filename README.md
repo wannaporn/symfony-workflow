@@ -1,4 +1,4 @@
-SFLive-Paris2016-Workflow
+Test for symfony workflow.
 =========================
 
 Installation
