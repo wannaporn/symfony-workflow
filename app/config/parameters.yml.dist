@@ -1,4 +1,9 @@
 parameters:
-    database_url: postgres://ubuntu@postgres.lxc/symfony_demo_workflow
-
+    database_host: 127.0.0.1
+    database_port: 3306
+    database_name: symfony
+    database_user: root
+    database_password: null
+    database_version: 5.7
+    database_path: '%kernel.root_dir%/data.db3'
     secret: ThisTokenIsNotSoSecretChangeIt
