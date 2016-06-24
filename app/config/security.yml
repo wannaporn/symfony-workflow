@@ -1,0 +1,26 @@
+security:
+    role_hierarchy:
+        ROLE_ADMIN: [ROLE_WRITTER, ROLE_SPELLCHECKER, ROLE_JOURNALIST]
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+    providers:
+        in_memory:
+            memory:
+                users:
+                    alice: { password: password, roles: ROLE_WRITTER }
+                    spellchecker: { password: password , roles: ROLE_SPELLCHECKER }
+                    journalist: { password: password , roles: ROLE_JOURNALIST }
+                    admin: { password: password , roles: ROLE_ADMIN }
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            pattern: ^/
+            anonymous: true
+            logout: true
+            switch_user:
+                role: IS_AUTHENTICATED_ANONYMOUSLY
