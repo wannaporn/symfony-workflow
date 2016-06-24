@@ -1,9 +1,5 @@
 Test for symfony workflow.
 =========================
 
-Installation
-------------
-
-    composer install
-    bin/console doctrine:database:create
-    bin/console doctrine:schema:update --force
+- Base on Symfony 3.2.x.
+- Work with `Workflow component`.
